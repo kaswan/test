@@ -180,7 +180,9 @@ html{
 .input-group-addon:first-child {
     border: 0;
 }
-
+.input-group-addon {
+  background-color: #fff !important;
+}
 /**********************************
 
 Name: cmxform Styles
