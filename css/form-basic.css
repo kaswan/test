@@ -205,6 +205,7 @@ form.cmxform legend, form.cmxform label {
 form.cmxform label.error, label.error {
     /* remove the next line when you have trouble in IE6 with labels in list */
     color: red; 
+    margin-top: 5px;
 }
 div.error { display: none; }
 input { border: 1px solid black; }
