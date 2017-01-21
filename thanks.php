@@ -47,7 +47,7 @@ $body=<<< EOT
 
 EOT;
 
-#mb_send_mail('ogiu.keita@lancers.co.jp,madankaswan@gmail.com', $subject, $body);
+mb_send_mail('ogiu.keita@lancers.co.jp,madankaswan@gmail.com', $subject, $body);
 
 ?>
 
