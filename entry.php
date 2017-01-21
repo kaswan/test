@@ -83,19 +83,19 @@
                     <select name="year" class="dob">
                         <option>お選びください</option>
                         <?php for($i=date("Y")-15; $i > 1950; $i--) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['year']) echo "selected" ?> ><?php echo $i ?>年</option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['year']) echo "selected" ?> ><?php echo $i ?></option>
                         <?php } ?>
                     </select>年
                     <select name="month" class="dob">
                         <option>--</option>
                         <?php for($i=1; $i <= 12; $i++) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['month']) echo "selected" ?> ><?php echo $i ?>月</option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['month']) echo "selected" ?> ><?php echo $i ?></option>
                         <?php } ?>
                     </select>月
                     <select name="day" class="dob">
                         <option>--</option>
                         <?php for($i=1; $i <= 31; $i++) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['day']) echo "selected" ?> ><?php echo $i ?>日</option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['day']) echo "selected" ?> ><?php echo $i ?></option>
                         <?php } ?>
                     </select>日
                       <span style="display:none;">
