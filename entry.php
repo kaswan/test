@@ -33,8 +33,20 @@
                 <label>
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> お名前／漢字（全角）</span></div>
 
-                    <div class="col-sm-4 "> 姓 <input type="text" name="last_name" placeholder="例）全労済" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）全労済'" required value="<?php echo($_POST['last_name'])?>"></div>
-                    <div class="col-sm-4 "> 名 <input type="text" name="first_name" placeholder="例）太郎" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）太郎'" required value="<?php echo($_POST['first_name'])?>"></div>
+                    <div class="col-sm-4 ">
+                       <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">姓　</div>
+                        <input type="text" name="last_name" placeholder="例）全労済" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）全労済'" required value="<?php echo($_POST['last_name'])?>" class="form-control" id="inlineFormInputGroup" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 ">
+                       <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">名　</div>
+                        <input type="text" name="first_name" placeholder="例）太郎" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）太郎'" required value="<?php echo($_POST['first_name'])?>" class="form-control" id="inlineFormInputGroup" />
+                        </div>
+                    </div>
+                    
                 </label>
             </div>
 
@@ -42,32 +54,48 @@
                 <label>
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> お名前／フリガナ（全角カナ）</span></div>
                     
-                    <div class="col-sm-4 "> セイ<input type="text" name="last_name_kana" placeholder="例）ゼンロウサイ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）ゼンロウサイ'" required value="<?php echo($_POST['last_name_kana'])?>"></div>
-                   <div class="col-sm-4 "> メイ <input type="text" name="first_name_kana" placeholder="例）タロウ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）タロウ'" required value="<?php echo($_POST['first_name_kana'])?>"></div>
+                    <div class="col-sm-4 ">
+                       <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">セイ</div>
+                        <input type="text" name="last_name_kana" placeholder="例）ゼンロウサイ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）ゼンロウサイ'" required value="<?php echo($_POST['last_name_kana'])?>" class="form-control" id="inlineFormInputGroup" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 ">
+                       <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">メイ</div>
+                        <input type="text" name="first_name_kana" placeholder="例）タロウ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）タロウ'" required value="<?php echo($_POST['first_name_kana'])?>" class="form-control" id="inlineFormInputGroup" />
+                        </div>
+                    </div>
                 </label>
             </div>
 
+            
+            
+            
+            
+            
             <div class="form-row">
                 <label>
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> 生年月日</span></div>
                     <div class="col-sm-1 "></div>
                     <div class="col-sm-7 ">
-                    <select name="year">
+                    <select name="year" class="dob">
                         <option>お選びください</option>
                         <?php for($i=date("Y")-15; $i > 1950; $i--) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['year']) echo "selected" ?> ><?php echo $i ?></option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['year']) echo "selected" ?> ><?php echo $i ?>年</option>
                         <?php } ?>
                     </select>年
-                    <select name="month">
+                    <select name="month" class="dob">
                         <option>--</option>
                         <?php for($i=1; $i <= 12; $i++) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['month']) echo "selected" ?> ><?php echo $i ?></option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['month']) echo "selected" ?> ><?php echo $i ?>月</option>
                         <?php } ?>
                     </select>月
-                    <select name="day">
+                    <select name="day" class="dob">
                         <option>--</option>
                         <?php for($i=1; $i <= 31; $i++) { ?>
-                          <option value="<?php echo $i ?>" <?php if($i == $_POST['day']) echo "selected" ?> ><?php echo $i ?></option>
+                          <option value="<?php echo $i ?>" <?php if($i == $_POST['day']) echo "selected" ?> ><?php echo $i ?>日</option>
                         <?php } ?>
                     </select>日
                       <span style="display:none;">
@@ -99,7 +127,7 @@
                     <div class="col-sm-4 "></div>
                     <div class="col-sm-8 ">
                     <?php $prefectures = array('北海道','青森県','岩手県','宮城県','秋田県','山形県','福島県','茨城県','栃木県','群馬県','埼玉県','千葉県','東京都','神奈川県','山梨県','長野県','新潟県','富山県','石川県','福井県','岐阜県','静岡県','愛知県','三重県','滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県','鳥取県','島根県','岡山県','広島県','山口県','徳島県','香川県','愛媛県','高知県','福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県')?>
-                      <select name="prefecture" id="area">
+                      <select name="prefecture" id="area" class="pref">
                         <option value="">お選び下さい</option>
                         <?php foreach($prefectures as $pref) { ?>
                           <option value="<?php echo $pref ?>" <?php if($pref == $_POST['prefecture']) echo "selected" ?>><?php echo $pref ?></option>
@@ -110,7 +138,7 @@
                     <div class="col-sm-8 ">市区町村名<input type="text" name="address_city" placeholder="例）渋谷区代々木" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）渋谷区代々木'" required value="<?php echo($_POST['address_city'])?>" class="address">
                     </div>
                     <div class="col-sm-4 "></div>
-                    <div class="col-sm-8 ">番地・ビル・マンション名・様方<input type="text" name="address_building" placeholder="例）９－８－７労済ビル１０１号室　○○様方" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）千代田区神田佐久間町1-18 信交ビル5階'" required value="<?php echo($_POST['address_building'])?>" class="address">
+                    <div class="col-sm-8 ">番地・ビル・マンション名<input type="text" name="address_building" placeholder="例）９－８－７労済ビル１０１号室" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）９－８－７労済ビル１０１号室'" required value="<?php echo($_POST['address_building'])?>" class="address">
                     </div>
                 </label>
             </div>

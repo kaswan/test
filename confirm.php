@@ -30,33 +30,33 @@
         <table class="table table-bordered text-left">
           <tbody>
             <tr>
-              <th class="col-md-4"><span class="req">必須</span>お名前／漢字</th>
+              <th class="col-md-4">お名前／漢字</th>
               <td>
                  <?php echo $_POST['last_name'] . " " . $_POST['first_name'] ?>
               </td>
             </tr>
             <tr>
-              <th><span class="req">必須</span>お名前／フリガナ</th>
+              <th>お名前／フリガナ</th>
               <td>
                  <?php echo $_POST['last_name_kana'] . " " . $_POST['first_name_kana'] ?>
               </td>
             </tr>
             <tr>
-              <th><span class="req">必須</span>生年月日</th>
+              <th>生年月日</th>
               <td>
                  <?php echo $_POST['year'] . "年" . $_POST['month'] . "月" . $_POST['day'] . '日' ?>
               </td>
             </tr>
 
             <tr>
-              <th><span class="req">必須</span>性別</th>
+              <th>性別</th>
               <td>
                  <?php echo $_POST['gender'] ?>
               </td>
             </tr>
 
             <tr>
-              <th><span class="req">必須</span>ご住所</th>
+              <th>ご住所</th>
               <td>
               〒<?php echo $_POST['zip'] ?><br>
               <?php echo $_POST['prefecture'] . $_POST['address_city'] . $_POST['address_building'] ?>
@@ -65,13 +65,13 @@
 
 
             <tr>
-              <th><span class="req">必須</span>お電話番号</th>
+              <th>お電話番号</th>
               <td>
               <?php echo $_POST['phone'] ?>
               </td>
             </tr>
             <tr>
-              <th><span class="req">必須</span>メールアドレス</th>
+              <th>メールアドレス</th>
               <td>
               <?php echo $_POST['email'] ?>
               </td>

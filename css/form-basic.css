@@ -50,14 +50,25 @@ html{
 .rdo {
     padding: 8px 25px;
 }
+.dob {
+	margin: 15px !important;
+	padding: 10px 12px !important;
+	height: 35px;
+}
+.pref {
+	margin: 15px !important;
+	padding: 10px 12px !important;
+	height: 35px;
+    width: inherit;
+}
 .address {
     width: 100% !important;
-    margin: 5px;
+    margin: 15px !important;
     padding: 10px 12px;
 }
 
 .zip {
-    width: 110px !important;
+    width: 115px !important;
 }
 
 .tel {
@@ -164,6 +175,10 @@ html{
     font-size:12px;
     margin-left:15px;
     background: #d87778;
+}
+
+.input-group-addon:first-child {
+    border: 0;
 }
 
 /**********************************
