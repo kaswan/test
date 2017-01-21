@@ -53,12 +53,12 @@ html{
 .dob {
 	margin: 2px !important;
 	padding: 10px 12px !important;
-	height: 35px;
+	height: 40px;
 }
 .pref {
 	margin: 15px !important;
 	padding: 10px 12px !important;
-	height: 35px;
+	height: 40px;
     width: inherit;
 }
 .address {
