@@ -64,7 +64,8 @@ html{
 .address {
     width: 100% !important;
     margin: 15px !important;
-    padding: 10px 12px;
+    padding: 2px 5px;
+    height: 40px;
 }
 
 .zip {
@@ -83,9 +84,10 @@ html{
     box-sizing: border-box;
     width: 240px;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 12px;
+    padding: 2px 5px;
     border: 1px solid #dbdbdb;
     margin: 5px;
+    height: 40px;
 }
 
 .form-basic input[type=email]{
@@ -94,7 +96,7 @@ html{
     width: 600px;
     max-width: 100%;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 12px 5px;
+    padding: 2px 5px;
     border: 1px solid #dbdbdb;
     margin: 5px;
 }
