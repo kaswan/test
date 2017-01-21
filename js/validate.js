@@ -59,7 +59,9 @@
 					required: true,
 					zipTelRegex: true
 				},
-				address_city: "required",				
+				prefecture: "required",
+				address_city: "required",
+				address_building: "required",
 				phone: {
 					required: true,
 					zipTelRegex: true
@@ -96,7 +98,9 @@
 					required: "郵便番号を入力してください",
 					zipTelRegex: "半角数字を入力してください"
 				},
+				prefecture: "都道府県を選んでください",
 				address_city: "ご住所(市区町村名)を入力してください",
+				address_building: "ご住所(番地・ビル・マンション名)を入力してください",
 				
 			}
 		});

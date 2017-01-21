@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,14 +36,16 @@
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">姓　</div>
-                        <input type="text" name="last_name" placeholder="例）全労済" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）全労済'" required value="<?php echo($_POST['last_name'])?>" class="form-control" id="inlineFormInputGroup" />
+                        <input type="text" name="last_name" placeholder="例）全労済" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）全労済'" required value="<?php echo($_POST['last_name'])?>"   />
+                        <label for="last_name" class="error"></label>
                         </div>
                     </div>
                     
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">名　</div>
-                        <input type="text" name="first_name" placeholder="例）太郎" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）太郎'" required value="<?php echo($_POST['first_name'])?>" class="form-control" id="inlineFormInputGroup" />
+                        <input type="text" name="first_name" placeholder="例）太郎" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）太郎'" required value="<?php echo($_POST['first_name'])?>"   />
+                        <label for="first_name" class="error"></label>
                         </div>
                     </div>
                     
@@ -57,29 +59,25 @@
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">セイ</div>
-                        <input type="text" name="last_name_kana" placeholder="例）ゼンロウサイ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）ゼンロウサイ'" required value="<?php echo($_POST['last_name_kana'])?>" class="form-control" id="inlineFormInputGroup" />
+                        <input type="text" name="last_name_kana" placeholder="例）ゼンロウサイ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）ゼンロウサイ'" required value="<?php echo($_POST['last_name_kana'])?>"  />
+                        <label for="last_name_kana" class="error"></label>
                         </div>
                     </div>
                     
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">メイ</div>
-                        <input type="text" name="first_name_kana" placeholder="例）タロウ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）タロウ'" required value="<?php echo($_POST['first_name_kana'])?>" class="form-control" id="inlineFormInputGroup" />
+                        <input type="text" name="first_name_kana" placeholder="例）タロウ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）タロウ'" required value="<?php echo($_POST['first_name_kana'])?>"   />
+                        <label for="first_name_kana" class="error"></label>
                         </div>
                     </div>
                 </label>
             </div>
-
-            
-            
-            
-            
             
             <div class="form-row">
-                <label>
+                <div class="custom-div">
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> 生年月日</span></div>
-                    <div class="col-sm-1 "></div>
-                    <div class="col-sm-7 ">
+                    <div class="col-sm-8 ">
                     <select name="year" class="dob">
                         <option>お選びください</option>
                         <?php for($i=date("Y")-15; $i > 1950; $i--) { ?>
@@ -105,20 +103,20 @@
                       </span>
                     </div>
 
-                </label>
+                </div>
             </div>
 
             <div class="form-row">
-                <label>
+                <div class="custom-div">
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> 性別</span></div>
-                    <div class="col-sm-1 "></div>
-                    <div class="col-sm-7 "><label class="rdo"><input type="radio" name="gender" value="男性" <?php if($_POST['gender'] == '男性') echo 'checked'?>> 男性</label>
+                   
+                    <div class="col-sm-8 "><label class="rdo"><input type="radio" name="gender" value="男性" <?php if($_POST['gender'] == '男性') echo 'checked'?>> 男性</label>
                     <label class="rdo"><input type="radio" name="gender" value="女性" <?php if($_POST['gender'] == '女性') echo 'checked'?>> 女性</label>
                      <label for="gender" class="error"></label>
                     </div>
-                </label>
+                </div>
             </div>
-
+            
             <div class="form-row">
                 <label>
                     <div class="col-sm-4 "><span><spam class="req">必須</spam> ご住所／漢字（全角）</span></div>
@@ -133,26 +131,31 @@
                           <option value="<?php echo $pref ?>" <?php if($pref == $_POST['prefecture']) echo "selected" ?>><?php echo $pref ?></option>
                         <?php } ?>
                       </select>
+                      
                     </div>  
                     <div class="col-sm-4 "></div>
-                    <div class="col-sm-8 ">市区町村名<input type="text" name="address_city" placeholder="例）渋谷区代々木" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）渋谷区代々木'" required value="<?php echo($_POST['address_city'])?>" class="address">
+                    <div class="col-sm-8 ">
+                      <p class="adr_label">市区町村名</p>
+                      <input type="text" name="address_city" placeholder="例）渋谷区代々木" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）渋谷区代々木'" required value="<?php echo($_POST['address_city'])?>" class="address">
+                      <label for="address_city" class="error"></label>
                     </div>
                     <div class="col-sm-4 "></div>
-                    <div class="col-sm-8 ">番地・ビル・マンション名<input type="text" name="address_building" placeholder="例）９－８－７労済ビル１０１号室" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）９－８－７労済ビル１０１号室'" required value="<?php echo($_POST['address_building'])?>" class="address">
+                    <div class="col-sm-8 ">
+                       <p class="adr_label">番地・ビル・マンション名</p>
+                       <input type="text" name="address_building" placeholder="例）９－８－７労済ビル１０１号室" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）９－８－７労済ビル１０１号室'" required value="<?php echo($_POST['address_building'])?>" class="address">
+                       <label for="address_building" class="error"></label>
                     </div>
                 </label>
             </div>
 
             <div class="form-row">
-                <label>
-                    <div class="col-sm-4 "> <span><spam class="req">必須</spam> 電話番号（半角数字）</span></div>                    
-                    <div class="col-sm-2 "></div>
-                    <div class="col-sm-6 ">
+                <div class="custom-div">
+                    <div class="col-sm-4 "> <span><spam class="req">必須</spam> 電話番号（半角数字）</span></div>
+                    <div class="col-sm-8 ">
                       <input type="text" name="phone" placeholder="03-1111-1111" onfocus="this.placeholder = ''" onblur="this.placeholder = '03-1111-1111'" required value="<?php echo($_POST['phone'])?>" class="tel">
                     </div>
-                </label>
+                </div>
             </div>
-
 
             <div class="form-row">
                 <label>
@@ -161,8 +164,6 @@
                 </label>
                 </label>
             </div>
-
-            
 
             <div class="form-row">                
                 <center><input type="submit" id="confirm" name="submit" value="確認する" class="btn btn-success btn-lg"></center>
