@@ -37,16 +37,17 @@
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">姓　</div>
                         <input type="text" name="last_name" placeholder="例）全労済" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）全労済'" required value="<?php echo($_POST['last_name'])?>"   />
-                        <label for="last_name" class="error"></label>
-                        </div>
+                       </div>
+                       <label style="margin-left:58px;" for="last_name" class="error"></label>
                     </div>
                     
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">名　</div>
                         <input type="text" name="first_name" placeholder="例）太郎" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）太郎'" required value="<?php echo($_POST['first_name'])?>"   />
-                        <label for="first_name" class="error"></label>
+                        
                         </div>
+                        <label style="margin-left:58px;" for="first_name" class="error"></label>
                     </div>
                     
                 </label>
@@ -60,16 +61,16 @@
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">セイ</div>
                         <input type="text" name="last_name_kana" placeholder="例）ゼンロウサイ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）ゼンロウサイ'" required value="<?php echo($_POST['last_name_kana'])?>"  />
-                        <label for="last_name_kana" class="error"></label>
-                        </div>
+                       </div>
+                       <label style="margin-left:58px;" for="last_name_kana" class="error"></label> 
                     </div>
                     
                     <div class="col-sm-4 ">
                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">メイ</div>
                         <input type="text" name="first_name_kana" placeholder="例）タロウ" onfocus="this.placeholder = ''" onblur="this.placeholder = '例）タロウ'" required value="<?php echo($_POST['first_name_kana'])?>"   />
-                        <label for="first_name_kana" class="error"></label>
-                        </div>
+                       </div>
+                       <label style="margin-left:58px;" for="first_name_kana" class="error"></label>
                     </div>
                 </label>
             </div>

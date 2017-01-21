@@ -28,7 +28,7 @@ $email = $_POST['email'];
 mb_language('ja');
 mb_internal_encoding('UTF-8');
 $headers = "From: info@gyazo.com";
-$subject = "申込みありました";
+$subject = "申込みがありました";
 $body=<<< EOT
 
 ■お名前: $name

@@ -72,14 +72,14 @@
 				},				
 			},
 			messages: {
-				last_name: "入力してください",
-				first_name: "入力してください",
+				last_name: "姓を入力してください",
+				first_name: "名を入力してください",
 				last_name_kana: {
-					required: "入力してください",
+					required: "セイを入力してください",
 					kana: "全角カナを入力してください"
 				},
 				first_name_kana: {
-					required: "入力してください",
+					required: "メイを入力してください",
 					kana: "全角カナを入力してください"
 				},
 				gender: "性別を選んでください",
