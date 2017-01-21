@@ -27,7 +27,7 @@ $email = $_POST['email'];
 
 mb_language('ja');
 mb_internal_encoding('UTF-8');
-
+$headers = "From: madankaswan@gmail.com";
 $subject = "申込みありました";
 $body=<<< EOT
 
@@ -47,7 +47,7 @@ $body=<<< EOT
 
 EOT;
 
-mb_send_mail('ogiu.keita@lancers.co.jp,madankaswan@gmail.com', $subject, $body);
+mb_send_mail('ogiu.keita@lancers.co.jp,madankaswan@gmail.com', $subject, $body, $headers);
 
 ?>
 
